@@ -1,0 +1,202 @@
+table FactSales
+	lineageTag: 3abbdd74-837c-4b09-9703-f2b4c1aac5ca
+
+	column SalesKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c8133349-4ccc-49e2-a9a0-617a913292ae
+		summarizeBy: count
+		sourceColumn: SalesKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: dateTime
+		isHidden
+		formatString: m/d/yyyy
+		lineageTag: cf7290c3-0474-4c18-822a-fe6eac2c8a7c
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column channelKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 718c5552-9920-4ef8-8f05-d075dd73b22d
+		summarizeBy: count
+		sourceColumn: channelKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 84d6f234-0344-48dc-8d61-857c9c92f852
+		summarizeBy: count
+		sourceColumn: StoreKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 94a781ee-5f0b-4f39-a5b9-37a38ae178f3
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PromotionKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 94a84abc-c853-478e-bd84-fd643326d0c1
+		summarizeBy: none
+		sourceColumn: PromotionKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e69effd9-c138-4305-8331-d8731b0b75c9
+		summarizeBy: count
+		sourceColumn: CurrencyKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitCost
+		dataType: double
+		formatString: 0.00
+		lineageTag: 055306e5-8a38-4670-ac2f-f050659e90b5
+		summarizeBy: sum
+		sourceColumn: UnitCost
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: double
+		formatString: 0.00
+		lineageTag: fcd48a24-235d-4392-a66e-ad1c38fd4f4f
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ea8a1de-e687-4e27-a15b-01ec01d6e1d1
+		summarizeBy: sum
+		sourceColumn: SalesQuantity
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReturnQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: ce5ea25a-dff9-406a-a1e3-9b01feaa8cc2
+		summarizeBy: sum
+		sourceColumn: ReturnQuantity
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReturnAmount
+		dataType: double
+		formatString: 0.00
+		lineageTag: 7e3116e5-76b7-43f1-8415-c7cc2ac0732b
+		summarizeBy: sum
+		sourceColumn: ReturnAmount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiscountQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 786b0c5b-19cb-437f-9cbd-3037fdc52f8b
+		summarizeBy: sum
+		sourceColumn: DiscountQuantity
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiscountAmount
+		dataType: double
+		formatString: 0.00
+		lineageTag: 04ea0ff3-d85f-46a3-a94f-2a158933f18d
+		summarizeBy: sum
+		sourceColumn: DiscountAmount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column TotalCost
+		dataType: double
+		formatString: 0.00
+		lineageTag: 8f68619e-ea4d-400a-873f-0a7fdd4f5c1d
+		summarizeBy: sum
+		sourceColumn: TotalCost
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesAmount
+		dataType: double
+		formatString: 0.00
+		lineageTag: 4bf810f2-c764-41dc-8a4a-bd9b1a964f4f
+		summarizeBy: sum
+		sourceColumn: SalesAmount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactSales = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Badr\Courses\Power BI\Projects\Contoso-Sales-Analytics\resources\ContosoData\FactSales.csv"),[Delimiter=",", Columns=16, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"SalesKey", Int64.Type}, {"DateKey", type date}, {"channelKey", Int64.Type}, {"StoreKey", Int64.Type}, {"ProductKey", Int64.Type}, {"PromotionKey", Int64.Type}, {"CurrencyKey", Int64.Type}, {"UnitCost", type number}, {"UnitPrice", type number}, {"SalesQuantity", Int64.Type}, {"ReturnQuantity", Int64.Type}, {"ReturnAmount", type number}, {"DiscountQuantity", Int64.Type}, {"DiscountAmount", type number}, {"TotalCost", type number}, {"SalesAmount", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

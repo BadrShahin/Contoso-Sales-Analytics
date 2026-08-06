@@ -1,0 +1,226 @@
+table DimDate
+	lineageTag: 4b73099d-d7e8-43e1-a29a-23e73be19e7f
+	dataCategory: Time
+
+	column DateKey
+		dataType: dateTime
+		isKey
+		formatString: m/d/yyyy
+		lineageTag: 2e7423e9-9f5c-4749-85e2-4fbc07dde6fb
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column CalendarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b46408e-4c1c-427f-87d4-3aca22e80809
+		summarizeBy: sum
+		sourceColumn: CalendarYear
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYearLabel
+		dataType: string
+		lineageTag: 6592aca0-b268-4902-81ea-7d8860e33807
+		summarizeBy: none
+		sourceColumn: CalendarYearLabel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarHalfYearLabel
+		dataType: string
+		lineageTag: 6ce1a51e-9f4b-4962-945c-4a0ebb4f9d96
+		summarizeBy: none
+		sourceColumn: CalendarHalfYearLabel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarQuarterLabel
+		dataType: string
+		lineageTag: 7e9fbe81-299d-420e-905d-0c5147101446
+		summarizeBy: none
+		sourceColumn: CalendarQuarterLabel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarMonthLabel
+		dataType: string
+		lineageTag: ce055f6b-9001-4150-be6d-d36f13e5bebe
+		summarizeBy: none
+		sourceColumn: CalendarMonthLabel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarWeekLabel
+		dataType: string
+		lineageTag: 98d8c6eb-f818-408f-b7b9-72f1a8505493
+		summarizeBy: none
+		sourceColumn: CalendarWeekLabel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarDayOfWeekLabel
+		dataType: string
+		lineageTag: 6587ca03-d5a6-44ab-a07b-56564e08c411
+		summarizeBy: none
+		sourceColumn: CalendarDayOfWeekLabel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: f5be9f27-5d0c-49c2-9f6f-ec7e46706c48
+		summarizeBy: sum
+		sourceColumn: FiscalYear
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearLabel
+		dataType: string
+		lineageTag: 0a7a225d-1e7b-43ce-8389-00c66d2890a1
+		summarizeBy: none
+		sourceColumn: FiscalYearLabel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalHalfYearLabel
+		dataType: string
+		lineageTag: 2b71276f-2c78-4626-a94f-6eec05510034
+		summarizeBy: none
+		sourceColumn: FiscalHalfYearLabel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarterLabel
+		dataType: string
+		lineageTag: cf662ae8-2721-4187-b65b-ff3139cadf7e
+		summarizeBy: none
+		sourceColumn: FiscalQuarterLabel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalMonthLabel
+		dataType: string
+		lineageTag: 08b416a9-525b-4fe0-a046-bdd0b34ab6a4
+		summarizeBy: none
+		sourceColumn: FiscalMonthLabel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsWorkDay
+		dataType: string
+		lineageTag: 6131c379-c49c-443d-bf7b-4e8ff369e827
+		summarizeBy: none
+		sourceColumn: IsWorkDay
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsHoliday
+		dataType: string
+		lineageTag: c4521edf-2e69-46e1-b42c-6317453f510b
+		summarizeBy: none
+		sourceColumn: IsHoliday
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EuropeSeason
+		dataType: string
+		lineageTag: 13304522-5167-48d2-b057-37ec50f05a2d
+		summarizeBy: none
+		sourceColumn: EuropeSeason
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NorthAmericaSeason
+		dataType: string
+		lineageTag: 0142a228-7f25-4225-a818-a135623465c0
+		summarizeBy: none
+		sourceColumn: NorthAmericaSeason
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AsiaSeason
+		dataType: string
+		lineageTag: 37f53db5-dee4-4804-b300-8ebf9bca4d8a
+		summarizeBy: none
+		sourceColumn: AsiaSeason
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 76e78309-82d0-42a1-9d72-cd666173cdf0
+		summarizeBy: sum
+		sourceColumn: MonthNumber
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarDayOfWeekNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 83d0baa8-3777-42bf-b8ec-e1c353d234c4
+		summarizeBy: sum
+		sourceColumn: CalendarDayOfWeekNumber
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Badr\Courses\Power BI\Projects\Contoso-Sales-Analytics\resources\ContosoData\DimDate.csv"),[Delimiter=",", Columns=20, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DateKey", type date}, {"CalendarYear", Int64.Type}, {"CalendarYearLabel", type text}, {"CalendarHalfYearLabel", type text}, {"CalendarQuarterLabel", type text}, {"CalendarMonthLabel", type text}, {"CalendarWeekLabel", type text}, {"CalendarDayOfWeekLabel", type text}, {"FiscalYear", Int64.Type}, {"FiscalYearLabel", type text}, {"FiscalHalfYearLabel", type text}, {"FiscalQuarterLabel", type text}, {"FiscalMonthLabel", type text}, {"IsWorkDay", type text}, {"IsHoliday", type text}, {"EuropeSeason", type text}, {"NorthAmericaSeason", type text}, {"AsiaSeason", type text}, {"MonthNumber", Int64.Type}, {"CalendarDayOfWeekNumber", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

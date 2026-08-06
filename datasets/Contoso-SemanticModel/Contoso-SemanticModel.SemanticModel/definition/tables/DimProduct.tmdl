@@ -1,0 +1,264 @@
+table DimProduct
+	lineageTag: 37acd576-feb7-45a1-bf34-337fb04eba47
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5b670212-8bc8-4300-8ba5-cae88609fadd
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: 4b704381-2734-42af-b945-1ff5970d7ee3
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductDescription
+		dataType: string
+		lineageTag: d1f531bc-db51-44ae-ac8f-feb749aa17b9
+		summarizeBy: none
+		sourceColumn: ProductDescription
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductSubcategoryKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4b786da3-0999-4fc7-85a8-e92d131e3d12
+		summarizeBy: none
+		sourceColumn: ProductSubcategoryKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Manufacturer
+		dataType: string
+		lineageTag: 927c6bb3-2f92-4d36-9da7-073a9cc0afd2
+		summarizeBy: none
+		sourceColumn: Manufacturer
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BrandName
+		dataType: string
+		lineageTag: c197b957-cda3-41f8-a4f6-5eb30f82d5f0
+		summarizeBy: none
+		sourceColumn: BrandName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClassID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: db43fac2-86db-4db0-9b93-06ac6f18bb2c
+		summarizeBy: count
+		sourceColumn: ClassID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClassName
+		dataType: string
+		lineageTag: 890aeba0-636c-4999-8b5d-d8a9a9ef863b
+		summarizeBy: none
+		sourceColumn: ClassName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StyleID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7f32fc85-7cae-4b97-bf52-39db6cb5e7c4
+		summarizeBy: count
+		sourceColumn: StyleID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StyleName
+		dataType: string
+		lineageTag: 43b3a1d1-df74-4b8f-979c-8e617a0c6787
+		summarizeBy: none
+		sourceColumn: StyleName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ColorID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9df21dd4-d098-46be-9476-ee91bf10b6bd
+		summarizeBy: count
+		sourceColumn: ColorID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ColorName
+		dataType: string
+		lineageTag: 082566ac-8c0e-4b78-951a-b93fe2189622
+		summarizeBy: none
+		sourceColumn: ColorName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weight
+		dataType: double
+		formatString: 0.00
+		lineageTag: 5631a136-fe22-4959-ae1a-1672a3aca8d4
+		summarizeBy: sum
+		sourceColumn: Weight
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeightUnitMeasureID
+		dataType: string
+		isHidden
+		lineageTag: 6f73a1d0-c78c-452a-b9a7-676559c14d8c
+		summarizeBy: none
+		sourceColumn: WeightUnitMeasureID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitOfMeasureID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b3a95c69-4327-4058-a257-1e9b5aafc960
+		summarizeBy: count
+		sourceColumn: UnitOfMeasureID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitOfMeasureName
+		dataType: string
+		lineageTag: 875e2c27-ba4b-4883-914f-0874faf83e30
+		summarizeBy: none
+		sourceColumn: UnitOfMeasureName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StockTypeID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 97bc7a44-c52e-44d1-a803-216c10ced161
+		summarizeBy: count
+		sourceColumn: StockTypeID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StockTypeName
+		dataType: string
+		lineageTag: f2372b97-ef1f-46ff-9c6b-b83dc25cf83e
+		summarizeBy: none
+		sourceColumn: StockTypeName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitCost
+		dataType: double
+		lineageTag: cee922a5-54ff-4479-824c-22f45700a403
+		summarizeBy: sum
+		sourceColumn: UnitCost
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitPrice
+		dataType: double
+		formatString: 0.00
+		lineageTag: 23818820-39b6-4574-97cd-d3e57f7e03dc
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AvailableForSaleDate
+		dataType: dateTime
+		formatString: m/d/yyyy
+		lineageTag: 73e341d0-c0a8-4d97-9247-9da5eced2fba
+		summarizeBy: none
+		sourceColumn: AvailableForSaleDate
+
+		variation Variation
+			isDefault
+			relationship: 3c6f7abe-067a-4884-bc43-1783725ee8cc
+			defaultHierarchy: LocalDateTable_b8919566-3455-4168-9702-cf18dd082086.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Status
+		dataType: string
+		lineageTag: 5ab8e467-56bb-4e39-b8d1-d401b31a557e
+		summarizeBy: none
+		sourceColumn: Status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProduct = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Badr\Courses\Power BI\Projects\Contoso-Sales-Analytics\resources\ContosoData\DimProduct.csv"),[Delimiter=",", Columns=22, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ProductKey", Int64.Type}, {"ProductName", type text}, {"ProductDescription", type text}, {"ProductSubcategoryKey", Int64.Type}, {"Manufacturer", type text}, {"BrandName", type text}, {"ClassID", Int64.Type}, {"ClassName", type text}, {"StyleID", Int64.Type}, {"StyleName", type text}, {"ColorID", Int64.Type}, {"ColorName", type text}, {"Weight", type number}, {"WeightUnitMeasureID", type text}, {"UnitOfMeasureID", Int64.Type}, {"UnitOfMeasureName", type text}, {"StockTypeID", Int64.Type}, {"StockTypeName", type text}, {"UnitCost", type number}, {"UnitPrice", type number}, {"AvailableForSaleDate", type date}, {"Status", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

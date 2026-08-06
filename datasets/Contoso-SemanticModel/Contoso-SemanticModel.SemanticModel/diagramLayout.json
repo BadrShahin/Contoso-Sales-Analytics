@@ -1,0 +1,112 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 52.670036275867687
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 625.46600245230024,
+            "y": 189.4357331356876
+          },
+          "nodeIndex": "FactSales",
+          "nodeLineageTag": "3abbdd74-837c-4b09-9703-f2b4c1aac5ca",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 325.96722400000004,
+            "y": 0
+          },
+          "nodeIndex": "DimProduct",
+          "nodeLineageTag": "37acd576-feb7-45a1-bf34-337fb04eba47",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 936.07021268196786,
+            "y": 0
+          },
+          "nodeIndex": "DimDate",
+          "nodeLineageTag": "4b73099d-d7e8-43e1-a29a-23e73be19e7f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 416.04021039055181
+          },
+          "nodeIndex": "DimProductCategory",
+          "nodeLineageTag": "b76821d3-1ac8-4c02-a053-59bc0cacfbb7",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 187.31925706784375
+          },
+          "nodeIndex": "DimProductSubcategory",
+          "nodeLineageTag": "e190caae-b32e-4e2e-8947-cc6181e415a6",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 930.08444868196784,
+            "y": 450.06583809763805
+          },
+          "nodeIndex": "DimPromotion",
+          "nodeLineageTag": "6674eb77-8393-4278-9fed-e9b92714e4f8",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1250.7370031979056,
+            "y": 209.22288619527586
+          },
+          "nodeIndex": "MeasureCatalog",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 63.287087723234045,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

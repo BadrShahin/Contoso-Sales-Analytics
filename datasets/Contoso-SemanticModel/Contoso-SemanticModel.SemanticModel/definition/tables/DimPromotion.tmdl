@@ -1,0 +1,60 @@
+table DimPromotion
+	lineageTag: 6674eb77-8393-4278-9fed-e9b92714e4f8
+
+	column PromotionKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a9fcbfe8-26e9-4066-bb57-2fd523391f99
+		summarizeBy: none
+		sourceColumn: PromotionKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PromotionName
+		dataType: string
+		lineageTag: 84a3e833-0bed-4699-916c-8e9104ba2423
+		summarizeBy: none
+		sourceColumn: PromotionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiscountPercent
+		dataType: double
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: d685e9ab-5b4c-44a7-818b-34f50a36c219
+		summarizeBy: none
+		sourceColumn: DiscountPercent
+
+		annotation SummarizationSetBy = Automatic
+
+	column PromotionType
+		dataType: string
+		lineageTag: 17250d13-e0ae-4308-ae99-d5678a1e41b8
+		summarizeBy: none
+		sourceColumn: PromotionType
+
+		annotation SummarizationSetBy = Automatic
+
+	column PromotionCategory
+		dataType: string
+		lineageTag: 35bee5b4-9e65-4dd8-8659-aec92318d9f3
+		summarizeBy: none
+		sourceColumn: PromotionCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimPromotion = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Badr\Courses\Power BI\Projects\Contoso-Sales-Analytics\resources\ContosoData\DimPromotion.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"PromotionKey", Int64.Type}, {"PromotionName", type text}, {"DiscountPercent", type number}, {"PromotionType", type text}, {"PromotionCategory", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
