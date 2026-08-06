@@ -1,0 +1,25 @@
+relationship 3c6f7abe-067a-4884-bc43-1783725ee8cc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimProduct.AvailableForSaleDate
+	toColumn: LocalDateTable_b8919566-3455-4168-9702-cf18dd082086.Date
+
+relationship AutoDetected_72f5cee1-e0f7-4567-a650-455d2c1c0c9a
+	fromColumn: FactSales.ProductKey
+	toColumn: DimProduct.ProductKey
+
+relationship 76841f53-8a1a-86fd-f94e-a04cc470b6f4
+	fromColumn: FactSales.DateKey
+	toColumn: DimDate.DateKey
+
+relationship AutoDetected_2a24760f-3efe-42fb-be6a-5c34246941a1
+	fromColumn: DimProduct.ProductSubcategoryKey
+	toColumn: DimProductSubcategory.ProductSubcategoryKey
+
+relationship AutoDetected_1fef9555-61af-4538-a4b9-cf113f9b5e92
+	fromColumn: DimProductSubcategory.ProductCategoryKey
+	toColumn: DimProductCategory.ProductCategoryKey
+
+relationship AutoDetected_40674e58-9bc8-483b-a1d3-edc68969cab7
+	fromColumn: FactSales.PromotionKey
+	toColumn: DimPromotion.PromotionKey
+

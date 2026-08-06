@@ -6,3 +6,13 @@ Thumbs.db
 
 # VS Code
 .vscode/settings.json
+
+# Local datasets
+resources/ContosoData/
+
+# Power BI cache
+**/.pbi/
+
+# Backup files
+*.pbix.backup
+*.tmp
