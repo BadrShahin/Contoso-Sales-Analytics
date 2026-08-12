@@ -26,8 +26,8 @@
                 }
               },
               "queryRef": "MeasureCatalog.Total Sales",
-              "nativeQueryRef": "Total Sales — Management KPI",
-              "displayName": "Total Sales — Management KPI"
+              "nativeQueryRef": "Total Sales",
+              "displayName": "Total Sales"
             }
           ]
         }
